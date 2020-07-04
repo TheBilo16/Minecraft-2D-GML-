@@ -3,6 +3,7 @@
 	yy = 0;
 	currentDirection = "right";
 	currentState = "stopped";
+	name  = "";
 #endregion
 
 #region Stats
@@ -19,7 +20,9 @@
 
 #region Inventory
 	currentObject = noone;
+	inventoryMaxItems = 10;
 	inventory = ds_list_create();
+	itemsObtained = ds_list_create();
 #endregion
 
 #region Sprites

@@ -1,3 +1,3 @@
 event_inherited();
 
-data_object = obj_control.items[0];
+data_object = getItemData("hacha de roca negra");

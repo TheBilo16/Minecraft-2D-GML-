@@ -49,6 +49,8 @@ function loadGame(){
 	}
 
 	ini_close();
+	
+	show_debug_message("Game load");
 }
 
 function deleteData(){

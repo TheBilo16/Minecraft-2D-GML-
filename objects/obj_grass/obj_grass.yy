@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_grass",
+    "path": "sprites/spr_grass/spr_grass.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -18,8 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_item_dropeable","path":"objects/obj_item_dropeable/obj_item_dropeable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_item_dropeable","path":"objects/obj_item_dropeable/obj_item_dropeable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_grass","path":"objects/obj_grass/obj_grass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -28,7 +30,7 @@
     "path": "folders/Objetos.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_item_dropeable",
+  "name": "obj_grass",
   "tags": [],
   "resourceType": "GMObject",
 }

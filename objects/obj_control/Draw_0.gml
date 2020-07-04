@@ -1,0 +1,1 @@
+draw_set_font(global.custom_font);

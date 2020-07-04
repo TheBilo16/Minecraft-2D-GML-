@@ -14,7 +14,6 @@
 						velocity += inventory[| i].powerup.value;
 						break;
 				}
-				
 				break;	
 			}
 		}
@@ -26,12 +25,14 @@
 #endregion
 
 #region Inventory
-	for(var i = 0; i < ds_list_size(inventory); i++){
-		if(inventory[| i].durability <= 0 or inventory[| i].count == 0){
-			ds_list_delete(inventory,i);
-			if(i == 0) currentObject = noone;
+	forEach(inventory, function(value,index){
+		if(value.durability != "infinite"){
+			if(value.durability <= 0 or value.count == 0){
+				ds_list_delete(inventory,index);
+				if(index == 0) currentObject = noone;
+			}
 		}
-	}
+	});
 #endregion
 
 #region Move
@@ -106,7 +107,7 @@
 	
 	//Colision Item
 	var item = instance_place(x,y,obj_item_dropeable);
-	if(item != noone){
+	if(item != noone && ds_list_size(inventory) <= inventoryMaxItems ){
 		var get = false;
 		
 		for(var i = 0; i < ds_list_size(inventory); i++){
@@ -124,9 +125,29 @@
 		
 		if(!get){
 			var newItem = item.data_object;
-			newItem.count = 1;
+			newItem.count = item.amount;
 			
 			ds_list_add(inventory,newItem);
+
+			#region ¿Item Obtained?
+				var obtained = true;
+				if(ds_list_size(itemsObtained) > 1){
+					forEach(itemsObtained, function(value,index){
+						if(newItem.idItem != value){
+							obtained = true;
+							return;	
+						}
+					
+						obtained = false;
+					});	
+				}
+			
+				if(obtained){
+					ds_list_add(itemsObtained,newItem.idItem);
+					global.newItemData = newItem;
+					global.gameState = "new-item-player";
+				}
+			#endregion
 		}
 		
 		with(item) instance_destroy();
@@ -135,8 +156,3 @@
 
 x += xx;
 y += yy;
-
-//Debuging
-if(keyboard_check_pressed(vk_enter)){
-	deleteData();
-}
