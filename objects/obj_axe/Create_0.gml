@@ -1,3 +1,3 @@
 event_inherited();
 
-data_object = getItemData("hacha de roca negra");
+data_object = getItemData("pico de roca negra");

@@ -1,10 +1,11 @@
 draw_text(10,40,currentObject != noone ? currentObject.name : "--EMPTY--");
 
-forEach(inventory, function(value){
-	var yy = 55;
+for(var i = 0; i < ds_list_size(inventory); i++){
+	var yy = 55 + (10 * (i + 1)),
+		value = inventory[| i];
+		
 	draw_text(10,yy,"- " + value.name + "  -  " + string(value.count)  + "  -  " + string(value.durability));	
-	yy += 10;
-})
+}
 
 if(currentObject != noone){
 	var xx , yy , scale;

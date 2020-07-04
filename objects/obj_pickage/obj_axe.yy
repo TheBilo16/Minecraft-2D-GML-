@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_pickage_blackstone",
-    "path": "sprites/spr_pickage_blackstone/spr_pickage_blackstone.yy",
+    "name": "spr_axe_blackstone",
+    "path": "sprites/spr_axe_blackstone/spr_axe_blackstone.yy",
   },
   "solid": false,
   "visible": true,

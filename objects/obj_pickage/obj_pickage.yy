@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_pickage_blackstone",
-    "path": "sprites/spr_pickage_blackstone/spr_pickage_blackstone.yy",
+    "name": "spr_axe_blackstone",
+    "path": "sprites/spr_axe_blackstone/spr_axe_blackstone.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_axe","path":"objects/obj_axe/obj_axe.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_pickage","path":"objects/obj_pickage/obj_pickage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +33,7 @@
     "path": "folders/Objetos.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_axe",
+  "name": "obj_pickage",
   "tags": [],
   "resourceType": "GMObject",
 }

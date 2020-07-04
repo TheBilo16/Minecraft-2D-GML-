@@ -1,12 +1,14 @@
 function getItemData(name){
-	for(var i = 0; i < array_length(obj_control.items); i++){
-		var itemName = string_lower(obj_control.items[i].name);
+	var items = new Items();
+	
+	for(var i = 0; i < array_length(items.normal); i++){
+		var itemName = string_lower(items.normal[i].name);
 		if(itemName == string_lower(name)){
-			return obj_control.items[i];	
+			return items.normal[i];	
 		}
 	}
 	
-	return {};
+	throw "No se encontro el objeto";
 }
 
 function forEach(array,callback){

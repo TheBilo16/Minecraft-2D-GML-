@@ -9,13 +9,12 @@
 #region Stats
 	initialStats = {
 		strength : 1,
-		defense : 1,
-		velocity : 1
+		defense : 1
 	}
 
 	strength = initialStats.strength;
 	defense = initialStats.defense;
-	velocity = initialStats.velocity;
+	velocity = 1;
 #endregion
 
 #region Inventory
